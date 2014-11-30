@@ -1,8 +1,14 @@
 var express = require('express');
 
+function log(req) {
+    console.log('[mocker]: ' + req.url);
+};
+
 var router1 = express.Router();
+
 router1.get('/v1/post/:id', function(req, res, next) {
-    res.send('hello!');
+    log(req);
+    res.end('v1 called');
 });
 
 module.exports = {

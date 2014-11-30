@@ -1,18 +1,3 @@
-liveproxy
-=========
-
-LiveProxy is a cli only &amp; lite version of livepool for simple local replacement and proxy development scenes. 
-
-### useage
-```
-var liveproxy = require('liveproxy');
-liveproxy({
-    config: './test/route.example.js'
-});
-```
-
-### config example.js
-```
 var express = require('express');
 
 var router1 = express.Router();
@@ -22,7 +7,6 @@ router1.get('/v1/post/:id', function(req, res, next) {
 
 module.exports = {
     cwd: './test',
-    proxyAgent: 'proxy.tencent.com:8080',
     handler: [{
         match: 'find.qq.com/index.html',
         action: './dist/'
@@ -55,4 +39,3 @@ module.exports = {
         }
     }]
 };
-```

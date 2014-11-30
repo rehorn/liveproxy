@@ -1,38 +1,37 @@
 {
-  "name": "liveproxy",
-  "version": "0.1.0",
-  "description": "debugging proxy for web developers base on NodeJS",
-  "keywords": [
-    "proxy",
-    "debug",
-    "web",
-    "develop",
-    "gulp",
-    "grunt"
-  ],
-  "maintainers": [
-    {
-      "name": "rehornchen@tencent.com",
-      "web": "https://github.com/rehorn"
+    "name": "liveproxy",
+    "version": "0.1.1",
+    "description": "debugging proxy for web developers base on NodeJS",
+    "main": "index.js",
+    "keywords": [
+        "proxy",
+        "debug",
+        "web",
+        "develop",
+        "gulp",
+        "grunt"
+    ],
+    "maintainers": [{
+        "name": "rehornchen@tencent.com",
+        "web": "https://github.com/rehorn"
+    }],
+    "homepage": "https://github.com/rehorn/liveproxy",
+    "dependencies": {
+        "express": "^4.10.4",
+        "http-proxy": "^1.7.0",
+        "http-proxy-agent": "^0.2.6",
+        "mime": "^1.2.11",
+        "underscore": "^1.7.0",
+        "vhost": "^3.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rehorn/liveproxy.git"
+    },
+    "engines": {
+        "node": ">= 0.8.x"
+    },
+    "bugs": {
+        "url": "https://github.com/rehorn/liveproxy/issues"
     }
-  ],
-  "homepage": "https://github.com/rehorn/liveproxy",
-  "dependencies": {
-    "express": "^4.10.4",
-    "http-proxy": "^1.7.0",
-    "http-proxy-agent": "^0.2.6",
-    "mime": "^1.2.11",
-    "underscore": "^1.7.0",
-    "vhost": "^3.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rehorn/liveproxy.git"
-  },
-  "engines": {
-    "node": ">= 0.8.x"
-  },
-  "bugs": {
-    "url": "https://github.com/rehorn/liveproxy/issues"
-  }
 }

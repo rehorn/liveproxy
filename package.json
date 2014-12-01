@@ -1,6 +1,6 @@
 {
     "name": "liveproxy",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "debugging proxy for web developers base on NodeJS",
     "bin": "bin/liveproxy",
     "main": "index.js",

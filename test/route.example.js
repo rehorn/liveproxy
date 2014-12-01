@@ -1,9 +1,4 @@
-var express = require('express');
-
-function log(req) {
-    console.log('[mocker]: ' + req.url);
-};
-
+var express = require('../index').express;
 var router1 = express.Router();
 
 router1.get('/v1/post/:id', function(req, res, next) {
@@ -13,6 +8,9 @@ router1.get('/v1/post/:id', function(req, res, next) {
 
 module.exports = {
     cwd: './test',
+    reload: true,
+    jsconsole: true,
+    consoleId: 'liveproxy',
     handler: [{
         match: 'find.qq.com/index.html',
         action: './dist/'

@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+var usage = 'Usage: liveproxy [options]';
+var options = {
+    config: {
+        alias: 'c',
+        default: 'livefile.js',
+        describe: 'liveproxy config file'
+    },
+    cwd: {
+        alias: 'd',
+        default: '.',
+        describe: 'cwd directory'
+    },
+    port: {
+        alias: 'p',
+        default: 8090,
+        describe: 'proxy port'
+    },
+    reload: {
+        alias: 'r',
+        default: false,
+        describe: 'enable live reload changed files'
+    },
+    jsconsole: {
+        alias: 'r',
+        default: false,
+        describe: 'enable jsconsole service'
+    }
+};
+
+var taskArgs = require('optimist')
+    .usage(usage)
+    .options(options);
+
+var argv = taskArgs.argv;
+if (argv.h || argv.help) {
+    var help = taskArgs.help();
+    console.log(help);
+} else if (argv.v || argv.version) {
+    var pkg = require('../package.json');
+    console.log(pkg.version);
+} else {
+    var config = argv.config;
+    var path = require('path');
+    var fs = require('fs');
+    var _ = require('underscore');
+    var liveproxy = require('../');
+    liveproxy(argv);
+}

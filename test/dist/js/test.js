@@ -1,2 +1,3 @@
 console.log('test load');
-alert('hello, liveproxy!');
+document.write('<br/>document.write hello!!!')
+    // alert('hello, liveproxy!');

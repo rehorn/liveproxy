@@ -1,7 +1,8 @@
 {
     "name": "liveproxy",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "debugging proxy for web developers base on NodeJS",
+    "bin": "bin/liveproxy",
     "main": "index.js",
     "keywords": [
         "proxy",
@@ -17,10 +18,15 @@
     }],
     "homepage": "https://github.com/rehorn/liveproxy",
     "dependencies": {
+        "body-parser": "^1.9.3",
+        "chokidar": "^0.11.1",
+        "colors": "^1.0.3",
         "express": "^4.10.4",
         "http-proxy": "^1.7.0",
         "http-proxy-agent": "^0.2.6",
         "mime": "^1.2.11",
+        "optimist": "^0.6.1",
+        "socket.io": "^1.2.1",
         "underscore": "^1.7.0",
         "vhost": "^3.0.0"
     },

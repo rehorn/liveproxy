@@ -1,6 +1,18 @@
 var express = require('../index').express;
 var router1 = express.Router();
 
+// route mapping
+var routeMap = {
+    // '/': './modules/demo/index.js'
+};
+
+// add get router by routeMap
+for (var key in routeMap) {
+    if (routeMap.hasOwnProperty(key)) {
+        router.get(key, require(routeMap[key]));
+    }
+}
+
 router1.get('/v1/post/:id', function(req, res, next) {
     log(req);
     res.end('v1 called');
